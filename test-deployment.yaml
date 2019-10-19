@@ -16,14 +16,7 @@ items:
     strategy:
       activeDeadlineSeconds: 21600
       completionDeadlineSeconds: 1200
-      resources:
-        resources:
-          requests:
-            cpu: 100m 
-            memory: 128Mi 
-          limits:
-            cpu: 300m 
-            memory: 128Mi 
+      resources: {}
       rollingParams:
         intervalSeconds: 1
         maxSurge: 25%
