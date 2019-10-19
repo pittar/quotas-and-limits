@@ -14,7 +14,7 @@ oc apply -f test-deployment.yaml -n quota-test
 
 ## Key Components
 
-In the file `project-resource-quota.yaml`, no `limit` is defined for **CPU**.  This is intentional.  We don't want to set a quota limit on CPU here, but we will in the next step.  This will only apply to **NotTerminating** resources (your apps) and not build or deploy pods.  This means **Terminating** pods (deployment pods, build pods, etc...) should not count towards the project quota.
+In the file `project-resource-quota.yaml`, no project-level `limit` is defined for **CPU**.  This is intentional.  We don't want to set a quota limit on CPU here in order to let individual pods burst.  Limiting CPU to a reasonable burst level is taken care of in the next step.  This will only apply to **NotTerminating** resources (your apps) and not build or deploy pods.  This means **Terminating** pods (deployment pods, build pods, etc...) should not count towards the project quota.
 
 ```
 apiVersion: v1
