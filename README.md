@@ -9,7 +9,7 @@ oc apply -f project-resource-quota.yaml -n quota-test
 oc apply -f project-limit-ranges.yaml -n quota-test
 
 # As either admin or a user that can create deployments.
-oc apply -f test-deployment.yaml
+oc apply -f test-deployment.yaml -n quota-test
 ```
 
 ## Key Components

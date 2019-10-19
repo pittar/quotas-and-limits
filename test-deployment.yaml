@@ -15,6 +15,7 @@ items:
       deploymentconfig: hello-openshift
     strategy:
       activeDeadlineSeconds: 21600
+      completionDeadlineSeconds: 1200
       resources:
         resources:
           requests:
