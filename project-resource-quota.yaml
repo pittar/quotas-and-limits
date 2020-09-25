@@ -6,6 +6,5 @@ spec:
   hard:
     requests.cpu: "1000m"
     requests.memory: "2Gi"
-    limits.memory: "2Gi"
   scopes:
   - NotTerminating 
